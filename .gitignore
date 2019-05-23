@@ -1,0 +1,8 @@
+
+# Gogland directory
+/.idea/
+
+
+
+# Output of project
+/vendor/*
