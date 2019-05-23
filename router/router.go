@@ -3,15 +3,14 @@ package router
 import (
 	"gin-quick-start/controllers"
 	"github.com/gin-gonic/gin"
+	"net/http"
 )
 
 func InitRouter() *gin.Engine {
 	r := gin.Default()
 
 	r.GET("/ping", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"message": "pong",
-		})
+		c.String(http.StatusOK, "pong")
 	})
 
 	v1 := r.Group("/v1")
